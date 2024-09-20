@@ -13,7 +13,11 @@ if (process.env.DEVELOPMENT) {
 }
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello from express!");
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
 });
 
 app.get("/task", async (req, res) => {
